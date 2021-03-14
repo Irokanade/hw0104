@@ -37,22 +37,23 @@ int main() {
             *i = 0;
             keyTemp = lastKey;
             cleanString(&keyTemp);
-            //printf("keyTemp: %p\n", keyTemp);
-            //printf("keyTemp: %s\n", keyTemp);
+            printf("keyTemp: %p\n", keyTemp);
+            printf("keyTemp: %s\n", keyTemp);
             JsonObjArray[arrayCounter]->key = keyTemp;
-            //printf("key: %s\n", JsonObjArray[arrayCounter]->key);
+            printf("key: %s\n", JsonObjArray[arrayCounter]->key);
             lastKey = ++i;
             lastReadChar = ':';
-            //printf("lastkey: %s\n", lastKey);
-        } else if((*i == ',' || *i == '}') && level == 1 && lastReadChar == ':') {
+            printf("lastkey: %s\n", lastKey);
+        } else if((*i == ',' || *i == '}') && level <= 1 && lastReadChar == ':') {
             *i = 0;
             keyTemp = lastKey;
             cleanString(&keyTemp);
-            //printf("keyTemp: %s\n", keyTemp);
+            printf("keyTemp: %s\n", keyTemp);
             JsonObjArray[arrayCounter]->data = keyTemp;
-            //printf("data: %s\n", JsonObjArray[arrayCounter]->data);
+            printf("data: %s\n", JsonObjArray[arrayCounter]->data);
             lastKey = ++i;
             lastReadChar = ',';
+            arrayCounter++;
         }
         
         
@@ -60,6 +61,8 @@ int main() {
     
     printf("key: %s\n", JsonObjArray[0]->key);
     printf("data: %s\n", JsonObjArray[0]->data);
+    printf("key: %s\n", JsonObjArray[1]->key);
+    printf("data: %s\n", JsonObjArray[1]->data);
     
     printf("free pointers yay!\n");
     //free all of the JsonObj pointers
