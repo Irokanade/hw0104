@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E68FA61625FBA5250087FB57 /* json_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = E68FA61525FBA5250087FB57 /* json_parser.c */; };
+		E68FA61D25FDAE0E0087FB57 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = E68FA61C25FDAE0E0087FB57 /* Makefile */; };
 		E6B7061825F291DF004B0AEC /* hw0104.c in Sources */ = {isa = PBXBuildFile; fileRef = E6B7061725F291DF004B0AEC /* hw0104.c */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		E68FA61425FBA5250087FB57 /* json_parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json_parser.h; sourceTree = "<group>"; };
 		E68FA61525FBA5250087FB57 /* json_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = json_parser.c; sourceTree = "<group>"; };
+		E68FA61C25FDAE0E0087FB57 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		E6B7060B25F291CD004B0AEC /* hw0104 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hw0104; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B7061725F291DF004B0AEC /* hw0104.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hw0104.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				E6B7061725F291DF004B0AEC /* hw0104.c */,
 				E68FA61425FBA5250087FB57 /* json_parser.h */,
 				E68FA61525FBA5250087FB57 /* json_parser.c */,
+				E68FA61C25FDAE0E0087FB57 /* Makefile */,
 			);
 			path = hw0104;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68FA61D25FDAE0E0087FB57 /* Makefile in Sources */,
 				E68FA61625FBA5250087FB57 /* json_parser.c in Sources */,
 				E6B7061825F291DF004B0AEC /* hw0104.c in Sources */,
 			);
