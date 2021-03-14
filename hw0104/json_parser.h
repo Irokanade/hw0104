@@ -20,6 +20,7 @@ typedef struct _JsonObj {
 } JsonObj;
 
 JsonObj *initializeJsonObj(void);
-void clearString(char *str);
+void cleanString(char **str);
+void remove_spaces(char *s);
 
 #endif /* json_parser_h */

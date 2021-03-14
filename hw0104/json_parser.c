@@ -6,6 +6,7 @@
 //
 
 #include "json_parser.h"
+#include <string.h>
 
 JsonObj *initializeJsonObj() {
     JsonObj *JsonObj1 = (JsonObj*)malloc(sizeof(JsonObj1));
@@ -18,8 +19,34 @@ JsonObj *initializeJsonObj() {
     return JsonObj1;
 }
 
-void clearString(char *str) {
-    for(char *i = str; i != 0; i++) {
-        
+void cleanString(char **str) {
+    char *firstDoubleQuote = strchr(*str, '\"');
+    if(firstDoubleQuote != NULL) {
+        char *secondDoubleQuote = strchr(++firstDoubleQuote, '\"');
+        if(secondDoubleQuote != NULL) {
+            printf("str: %p\n", *str);
+            *secondDoubleQuote = 0;
+            *str = firstDoubleQuote;
+            printf("str: %p\n", *str);
+            printf("str: %s\n", *str);
+            return;
+        }
     }
+    
+    //else clear any symbol character
+    const char *d = *str;
+    do {
+        while (*d == ' ' || *d == '{' || *d == '}' || *d == '\"' || *d == ',' || *d == ':') {
+            ++d;
+        }
+    } while (**str++ = *d++);
+}
+
+void remove_spaces(char* s) {
+    const char* d = s;
+    do {
+        while (*d == ' ') {
+            ++d;
+        }
+    } while (*s++ = *d++);
 }
