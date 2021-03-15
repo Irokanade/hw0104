@@ -3,3 +3,6 @@ all: json_parser.o
 	
 json_parser.o:
 	gcc -c json_parser.c
+
+clean:
+	rm *.o

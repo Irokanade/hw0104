@@ -19,8 +19,11 @@ typedef struct _JsonObj {
     struct _JsonObj *subset[1024]; //may have another subset
 } JsonObj;
 
-JsonObj *initializeJsonObj(void);
+JsonObj *initializeJsonObj(unsigned long level);
 void cleanString(char **str);
+void removeSymbols(char *s);
 void remove_spaces(char *s);
+char *input(char *string, int len);
+char *searchKey(char *key, JsonObj *jsonArray[]);
 
 #endif /* json_parser_h */
